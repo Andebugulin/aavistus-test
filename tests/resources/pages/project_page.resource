@@ -7,10 +7,10 @@ ${CREATE_SESSION_BUTTON}    xpath=//*[@id="content-container"]/div[4]/div/div/bu
 
 *** Keywords ***
 Verify Project Page Loaded
-    Wait Until Element Is Visible    ${FIRST_SESSION}
+    Wait Until Element Is Visible    ${FIRST_SESSION}   timeout=5
     Sleep    1
 
 Open First Session
-    Wait Until Element Is Visible    ${FIRST_SESSION}
+    Wait Until Element Is Visible    ${FIRST_SESSION}   timeout=5
     Click Element    ${FIRST_SESSION}
     Sleep    2

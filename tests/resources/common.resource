@@ -15,7 +15,7 @@ ${LOGGED_IN}     ${FALSE}
 Open Browser With Custom Profile
     ${profile}=    Create Profile
     Open Browser    ${URL}    ${BROWSER}    ff_profile_dir=${profile}
-    Set Selenium Speed    0.5
+    Set Selenium Speed    0.2
     Maximize Browser Window
 
 Login Once
@@ -42,7 +42,7 @@ Launch Second Client
     [Arguments]    ${email}=${EMAIL_2}    ${password}=${PASSWORD_2}
     ${profile}=    Create Profile
     Open Browser    ${URL}    ${BROWSER}    alias=client2    ff_profile_dir=${profile}
-    Set Selenium Speed    0.5
+    Set Selenium Speed    0.2
     Maximize Browser Window
     Switch Browser    client2
     Click Button    xpath=//*[@id="action-area"]/div[3]/button[1]    # sign in button

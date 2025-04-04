@@ -12,26 +12,26 @@ ${SECOND_PROJECT}   xpath=//*[@id="__next"]/div/main/div[3]/div/div[2]/div[1]/di
 
 *** Keywords ***
 Verify Home Page Loaded
-    Wait Until Element Is Visible    ${HOME_TITLE}
+    Wait Until Element Is Visible    ${HOME_TITLE}  timeout=5
     ${text}=    Get Text    ${HOME_TITLE}
     Should Be Equal    ${text}    Your spaces
 
 Open Burger Menu
-    Wait Until Element Is Visible    ${BURGER_MENU}
+    Wait Until Element Is Visible    ${BURGER_MENU}   timeout=5
     Click Element    ${BURGER_MENU}
 
 Open Profile Menu
-    Wait Until Element Is Visible    ${PROFILE_MENU}
+    Wait Until Element Is Visible    ${PROFILE_MENU}    timeout=5
     Click Element    ${PROFILE_MENU}
 
 Open First Space
-    Wait Until Element Is Visible    ${FIRST_SPACE}
+    Wait Until Element Is Visible    ${FIRST_SPACE}   timeout=5
     Click Element    ${FIRST_SPACE}
 
 Open First Project
-    Wait Until Element Is Visible    ${FIRST_PROJECT}
+    Wait Until Element Is Visible    ${FIRST_PROJECT}   timeout=5
     Click Element    ${FIRST_PROJECT}
 
 Open Second Project
-    Wait Until Element Is Visible    ${SECOND_PROJECT}
+    Wait Until Element Is Visible    ${SECOND_PROJECT}  timeout=5
     Click Element    ${SECOND_PROJECT}

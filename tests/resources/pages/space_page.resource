@@ -9,11 +9,11 @@ ${CREATE_BUTTON}            css=button.MuiButton-root:nth-child(2)
 
 *** Keywords ***
 Verify Space Page Loaded
-    Wait Until Element Is Visible    ${CREATE_PROJECT_BUTTON}
+    Wait Until Element Is Visible    ${CREATE_PROJECT_BUTTON}   timeout=5
 
 Create New Project
     [Arguments]    ${name}    ${description}
-    Wait Until Element Is Visible    ${CREATE_PROJECT_BUTTON}
+    Wait Until Element Is Visible    ${CREATE_PROJECT_BUTTON}   timeout=5
     Click Button    ${CREATE_PROJECT_BUTTON}
     Input Text    ${PROJECT_NAME_FIELD}    ${name}
     Input Text    ${PROJECT_DESC_FIELD}    ${description}

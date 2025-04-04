@@ -9,16 +9,16 @@ ${SEND_BUTTON}          xpath=//*[@id="__next"]/main/div/div[3]/div/div[3]/div/d
 
 *** Keywords ***
 Verify Session Page Loaded
-    Wait Until Element Is Visible    ${ONE_COMMENT_BUTTON}
+    Wait Until Element Is Visible    ${ONE_COMMENT_BUTTON}  timeout=5
 
 View Previous Comments
-    Wait Until Element Is Visible    ${ONE_COMMENT_BUTTON}
+    Wait Until Element Is Visible    ${ONE_COMMENT_BUTTON}  timeout=5
     Click Element    ${ONE_COMMENT_BUTTON}
     Sleep    2
 
 Add Comment
     [Arguments]    ${comment_text}
-    Wait Until Element Is Visible    ${WRITE_A_COMMENT_FIELD}
+    Wait Until Element Is Visible    ${WRITE_A_COMMENT_FIELD}   timeout=5
     Click Element    ${WRITE_A_COMMENT_FIELD}
     Press Keys    ${WRITE_A_COMMENT_FIELD}    ${comment_text}
     Click Element    ${SEND_BUTTON}
